@@ -11,7 +11,7 @@ It's Jak 1 but everything is moved all around! No custom levels and no new actor
 
   
 Some collectables are annoying to reach - you may want to ease your pain by using **Baby Mode** (Options > Game Options > Baby Mode)
-- Hold L2 and press Dpad Down to store your current position (only works when Jak has a standpoint)
+- Hold L2 and press Dpad Down to store your current position (only works when Jak has a standpoint - you'll hear a ding to confirm)
 - Hold L2 and press Dpad Up to reset back to your previously stored position (this will also reset actors as if you had loaded a save file - green eco crates, enemies, etc)
 
 
