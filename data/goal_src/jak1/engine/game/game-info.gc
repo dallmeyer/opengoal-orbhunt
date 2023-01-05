@@ -10,9 +10,6 @@
 
 ;; The "perm" data is saved to the memory card.
 
-(define-extern runs-on-jak-death (function symbol none))
-;;Forward declaration Variable for mod base settings
-(define-extern startingDebugContinuePoint (string))
 
 ;;;;;;;;;;;;;;;;;;
 ;; border plane
@@ -207,12 +204,15 @@
          (goto cfg-50)
          )
        )
-       (runs-on-jak-death 'blackout)
      )
     )
   (kill-current-level-hint '() '() 'die)
   (case cause
     (('game)
+     (when (not save-to-load)
+       ;; reset counter on new game, switch files and ur fucked
+       (set! (-> *pc-settings* baby-mode-count) 0)
+       )
      ;; we are doing a full restart.
      ;; reset everything!
      (reset-all-hint-controls)
@@ -224,9 +224,6 @@
                           ((!= *kernel-boot-message* 'play)
                            "demo-start"
                            )
-                          ((and *debug-segment* (not (string= startingDebugContinuePoint "village1-hut")))
-                            startingDebugContinuePoint
-                            )
                           (*debug-segment*
                             "village1-hut"
                             )

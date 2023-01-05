@@ -1051,11 +1051,32 @@
 ;; method 27 level
 
 ;; method 10 level
-(defmethod is-object-visible? level ((obj level) (arg0 int))
+(defmethod is-object-visible? level ((obj level) (arg0 int) (actor entity))
   "Is arg0 visible? Note that this will return #f if the visibility data is not loaded."
 
   ;; note : pc port added option to show every actor regardless
-  (with-pc (if (-> *pc-settings* force-actors?) (return #t)))
+  (with-pc 
+    ;; hack to force visibility of stuff moved (rather than update visibility data)
+    (case (-> (the entity-actor actor) etype symbol)
+      (('money 'eco 'crate 'crate-buzzer 'fisher 'fuel-cell 'orb-cache-top 'yakow 'plat 'plat-flip 
+       'eggtop 'logtrap 'launcher 'racer 'spike 'balloon 'crate-darkeco-cluster 'aphid 'pelican 
+       'ventblue 'harvester 'flutflutegg 'grottopole 'bird-lady-beach 'ecoventrock 'part-tracker 
+       'citb-disc-a 'citb-disc-b 'citb-disc-c 'citb-disc-d 'citb-launcher 'scarecrow-a 'scarecrow-b
+       'junglesnake 'darkvine 'ecovent 'mistycannon 'babak-with-cannon 'periscope 'springbox 'teetertotter
+       'plant-boss 'warrior 'gambler 'pontoonten 'pontoonfive 'blue-eco-charger 'swamp-spike 'dark-crystal
+       'swamp-tetherrock 'swamp-rat-nest 'swamp-rock 'flutflut 'tar-plat 'balance-plat 'race-ring 'snow-bunny
+       'babak 'shortcut-boulder 'tntbarrel 'plunger-lurker 'snow-bumper 'ram 'snow-log-button 'snow-log
+       'snow-eggtop 'snow-switch 'snow-button 'flutflut-plat-med 'flutflut-plat-large 'flutflut-plat-small
+       )
+        (return #t)
+        )
+      (else
+        (if (-> *pc-settings* force-actors?)
+          (return #t)
+          )
+        )
+      )
+    )
 
   ;; check the vis bits!
   (let* (;; lwu v1, 388(a0)
@@ -1995,13 +2016,13 @@
         (when (and (= (-> s4-4 nickname) (-> *load-state* vis-nick)) ;; vis for A
                    (not (-> s4-4 inside-boxes?))                     ;; but not in A
                    )
-          (if (and (= *cheat-mode* 'debug) (-> s4-4 other inside-boxes?))
-              (format
-                *stdcon*
-                "~3LForcing outside of ~A [bad split boxes]~%~0L"
-                (-> s4-4 other name)
-                )
-              )
+          ;; (if (and (= *cheat-mode* 'debug) (-> s4-4 other inside-boxes?))
+          ;;     (format
+          ;;       *stdcon*
+          ;;       "~3LForcing outside of ~A [bad split boxes]~%~0L"
+          ;;       (-> s4-4 other name)
+          ;;       )
+          ;;     )
           (set! (-> s4-4 other inside-boxes?) #f)
           )
         )
@@ -2013,7 +2034,7 @@
   (cond
     ((not (or (-> obj level0 inside-boxes?) (-> obj level1 inside-boxes?)))
      (when (or (-> obj level0 vis-info 0) (-> obj level1 vis-info 0))
-       (if (= *cheat-mode* 'debug)
+       (if #f ;; (= *cheat-mode* 'debug)
            (format *stdcon* "~3Loutside of bsp~%~0L")
            )
        )

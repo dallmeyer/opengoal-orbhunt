@@ -8,7 +8,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Letterbox and blackout
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun-extern runs-every-frame (none))
 
 (defun set-letterbox-frames ((arg0 time-frame))
   "Set the letterbox frame counter for arg0 frames in the future"
@@ -598,19 +597,19 @@
       )
   )
 
+(define *actor-view-toggle* #t)
+(define-extern mod-run-each-frame (function none))
 (defbehavior display-loop process ()
   "This is in progress..."
 
   ;; increase our stack size.
   (stack-size-set! (-> self main-thread) 1024)
 
-  
-  
   (let ((disp *display*))
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ;; Pre loop initialization
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    
+
     ;; the size is 0, so this doesn't actually do anything.
     ;; (dma-send-to-spr (the-as uint #x70000000) (the-as uint *terrain-context*) (the-as uint 0) #t)
     (set! *teleport* #t)
@@ -625,11 +624,11 @@
 
 
     (while *run*
-   
-      (runs-every-frame) ;; trigger hook for mod base
-    
       ;; start immediately after all process updates finish.
       (profiler-instant-event "display-loop-top")
+
+      (mod-run-each-frame)
+      (if (cpad-pressed? 0 l2) (set! *actor-view-toggle* (not *actor-view-toggle*)))
 
       ;; drawing effects to be used in foreground drawing.
       (with-profiler "foreground-effects"
@@ -700,10 +699,10 @@
       (add-ee-profile-frame 'draw :g #x80)
 
       (with-profiler "menu"
-        (with-pc
-          (if 
-            (and (-> *pc-settings* display-sha) *debug-segment*)
-            (draw-build-revision)))
+        ;; (with-pc
+        ;;   (if 
+        ;;     (and (-> *pc-settings* display-sha) *debug-segment*)
+        ;;     (draw-build-revision)))
         (*menu-hook*)
         (add-ee-profile-frame 'draw :g #x40)
 
@@ -711,11 +710,6 @@
         (make-current-level-available-to-progress)
         (update-task-hints)
         (load-level-text-files -1)
-    
-
-
-  
-      
 
         (add-ee-profile-frame 'unknown-cpu-time)
         ;; collect perf stats
@@ -939,7 +933,6 @@
 
       (set! (-> *time-of-day-context* title-updated) #f)
       (set! *teleport* #f)
-   
       (when (nonzero? *teleport-count*)
         (set! *teleport* #t)
         (set! *teleport-count* (+ *teleport-count* -1))
@@ -966,10 +959,9 @@
            )
          )
 
-      
+
       ;; suspend
       (suspend)
-
       )
     )
 

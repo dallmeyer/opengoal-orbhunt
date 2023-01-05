@@ -65,16 +65,20 @@
                   )
               )
       ;; modified for pc port
-      (cond
-        ((cpad-hold? 0 up)
-          (set! *hud-collectable-view* (hud-collectable-view game-totals))
+      (if (not (-> *pc-settings* baby-mode?))
+        (cond
+          ((cpad-hold? 0 up)
+            (set! *hud-collectable-view* (hud-collectable-view game-totals))
+            )
+          ((cpad-hold? 0 down)
+            (set! *hud-collectable-view* (hud-collectable-view level-totals))
+            )
+          ((or (cpad-hold? 0 left) (cpad-hold? 0 right))
+            (set! *hud-collectable-view* (hud-collectable-view original))
+            )
           )
-        ((cpad-hold? 0 down)
-          (set! *hud-collectable-view* (hud-collectable-view level-totals))
-          )
-        ((or (cpad-hold? 0 left) (cpad-hold? 0 right))
-          (set! *hud-collectable-view* (hud-collectable-view original))
-          )
+        ;; in baby mode, reset to normal
+        (set! *hud-collectable-view* (hud-collectable-view original))
         )
       (cond
         ((and (-> obj increment-on-event)

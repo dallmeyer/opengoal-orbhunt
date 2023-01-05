@@ -226,7 +226,12 @@
 
 (defstate plat-path-active (plat)
   :virtual #t
-  :event (the-as (function process int symbol event-message-block object :behavior plat) plat-event)
+  :event (behavior ((arg0 process) (arg1 int) (arg2 symbol) (arg3 event-message-block))
+    (if (= arg2 'idle)
+      (go (method-of-object (the plat self) plat-idle))
+      (plat-event arg0 arg1 arg2 arg3)
+      )
+    )
   :exit (behavior ()
     (sound-stop (-> self sound-id))
     (none)
@@ -248,6 +253,7 @@
   :post (the-as (function none :behavior plat) plat-post)
   )
 
+(define-extern mod-override-plat-path (function plat entity-actor none))
 (defmethod init-from-entity! plat ((obj plat) (arg0 entity-actor))
   (set! (-> obj mask) (logior (process-mask platform) (-> obj mask)))
   (dummy-24 obj)
@@ -262,6 +268,7 @@
         (new 'process 'fact-info obj (pickup-type eco-pill-random) (-> *FACT-bank* default-pill-inc))
         )
   (set! (-> obj path) (new 'process 'curve-control obj 'path -1000000000.0))
+  (mod-override-plat-path obj arg0)
   (logior! (-> obj path flags) (path-control-flag display draw-line draw-point draw-text))
   (set! (-> obj sound-id) (new-sound-id))
   (cond

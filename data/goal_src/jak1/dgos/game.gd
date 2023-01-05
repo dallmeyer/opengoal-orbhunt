@@ -274,6 +274,23 @@
   ("pov-camera.o" "pov-camera")
   ("powerups.o" "powerups")
   ("crates.o" "crates")
+  ("mods_training.o" "mods_training")
+  ("mods_village1.o" "mods_village1")
+  ("mods_jungle.o" "mods_jungle")
+  ("mods_beach.o" "mods_beach")
+  ("mods_misty.o" "mods_misty")
+  ("mods_firecanyon.o" "mods_firecanyon")
+  ("mods_village2.o" "mods_village2")
+  ("mods_sunken.o" "mods_sunken")
+  ("mods_swamp.o" "mods_swamp")
+  ("mods_rolling.o" "mods_rolling")
+  ("mods_ogre.o" "mods_ogre")
+  ("mods_village3.o" "mods_village3")
+  ("mods_snowy.o" "mods_snowy")
+  ("mods_cave.o" "mods_cave")
+  ("mods_lavatube.o" "mods_lavatube")
+  ("mods_citadel.o" "mods_citadel")
+  ("mods.o" "mods")
   ("hud.o" "hud")
   ("hud-classes.o" "hud-classes")
   ("progress-static.o" "progress-static")
@@ -338,10 +355,7 @@
   ("plat-eco.o" "plat-eco")
   ("ropebridge.o" "ropebridge")
   ("ticky.o" "ticky")
-  ("mods-settings.o" "mods-settings") ;; added
-  ("put-custom-code-here.o" "put-custom-code-here") ;; added
-  ("define-custom-functions-here.o" "define-custom-functions-here") ;; added
-  ("put-custom-code-here.o" "put-custom-code-here") ;; added
+  ("hud-classes-pc.o" "hud-classes-pc") ;; added
   ;; keep zoomer stuff loaded
   ("target-racer-h.o" "target-racer-h")
   ("racer-part.o" "racer-part")
@@ -358,6 +372,4 @@
   ("target-flut.o" "target-flut")
   ("flut-saddle-ag.go" "flut-saddle")
   ("eichar-flut+0-ag.go" "eichar-flut+0")
-
   )
-  
