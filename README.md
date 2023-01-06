@@ -1,5 +1,5 @@
 # OpenGOAL - The Precursor Orb Hunt
-Play via the [opengoal-mod-launcher](https://github.com/OpenGOAL-Unofficial-Mods/opengoal-mod-launcher)!
+Play via the [opengoal-mod-launcher](https://opengoal-unofficial-mods.github.io))!
 
 It's Jak 1 but everything is moved all around! No custom levels and no new actors have been added in this mod - it's more-or-less the vanilla game except that existing actors have been relocated!
 
