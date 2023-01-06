@@ -14,6 +14,7 @@ It's Jak 1 but everything is moved all around! No custom levels and no new actor
 - You may need to work around some invisible collision/walls
 - You will need knowledge of speedrunning tech, such as dealing with slippery surfaces, zoom-walking, extended uppercuts, boosted uppercuts, infinite jump ceilings, etc
 - The Zoomer and Flutflut should only be necessary in their intended levels, however you CAN safely take them to any level without crashing (inb4 the optimal route is all Flutflut)
+- When completing tasks, Power Cells may sometimes spawn further away than typical in the vanilla game
 
   
 Some collectables are annoying to reach - you may want to ease your pain by using **Baby Mode** (Options > Game Options > Baby Mode)
