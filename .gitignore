@@ -6,7 +6,6 @@ data/log/*
 
 data/log/game.txt
 
-data/texture_replacements/*
 reshade-shaders/*
 AG1k's_Ultimate_Jak_and_Daxter_Preset_V1.ini
 ReShade.ini
