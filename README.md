@@ -8,9 +8,11 @@ Play via the [opengoal-mod-launcher](https://opengoal-unofficial-mods.github.io)
 It's Jak 1 but everything is moved all around! No custom levels and no new actors have been added in this mod - it's more-or-less the vanilla game except that existing actors have been relocated!
 
 
-**All collectables needed for 100% should be "in bounds"**, meaning they should be plainly visible and accessible, in the sense that you should never need to pass through (what appear to be) solid walls/objects to get to them (though I can't stop you from doing that when possible)
+**All collectables needed for 100% should be "in bounds"** meaning they should be plainly visible and accessible:
+- Passing through (what appear to be) solid walls/objects should never be necessary (though I can't stop you from doing it when possible)
+- Taking a death should never be necessary (but good luck with that)
 - You may need to work around some invisible collision/walls
-- You may  need to have knowledge of speedrunning tech, such as dealing with slippery surfaces, zoom-walking, extended uppercuts, boosted uppercuts, infinite jump ceilings, etc
+- You will need knowledge of speedrunning tech, such as dealing with slippery surfaces, zoom-walking, extended uppercuts, boosted uppercuts, infinite jump ceilings, etc
 - The Zoomer and Flutflut should only be necessary in their intended levels, however you CAN safely take them to any level without crashing (inb4 the optimal route is all Flutflut)
 
   
