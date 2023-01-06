@@ -11,7 +11,7 @@ Mid-2022 I was watching [headstrong1290](https://www.twitch.tv/headstrong1290) r
 
 ## Collectables
 **All collectables needed for 100% should be "in bounds"** meaning they should be plainly visible and accessible:
-- Passing through (what appear to be) solid walls/objects should never be necessary (though I can't stop you from doing it when possible)
+- Clipping through (what appear to be) solid walls/objects should never be necessary (though I can't stop you from doing it when possible)
 - Taking a death should never be necessary (but good luck with that)
 - You may need to work around some invisible collision/walls
 - You will need knowledge of speedrunning tech, such as dealing with slippery surfaces, zoom-walking, extended uppercuts, boosted uppercuts, infinite jump ceilings, etc
