@@ -301,6 +301,10 @@
 
   ;; check parent
   (case (-> (ppointer->process (-> obj parent)) name) :comp name=
+    (('farmer-3) ;; inside hut
+      (set-vector-meters! dst -22.16   3.75 -75.35)
+      (set-vector-meters! (res-lump-struct (-> obj entity) 'movie-pos (vector) :time (the-as float -1000000000.0)) -22.16   3.75 -75.35)
+      )
     (('plant-boss-3)
       ;; plant boss -> in center where eco switch usually is
       (set-vector-meters! dst 434.3 -41.0 -248.5)
