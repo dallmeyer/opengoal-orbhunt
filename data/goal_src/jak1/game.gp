@@ -1629,6 +1629,11 @@
 ;; the DGO file
 (custom-level-cgo "TSZ.DGO" "test-zone/testzone.gd")
 
+;; it should point to the .jsonc file that specifies the level.
+(build-custom-level "crystal-cave")
+;; the DGO file
+(custom-level-cgo "CRC.DGO" "crystal-cave/crystalc.gd")
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Game Engine Code
 ;;;;;;;;;;;;;;;;;;;;;
@@ -2076,6 +2081,7 @@
    "game/mods/mods_cave.gc"
    "game/mods/mods_lavatube.gc"
    "game/mods/mods_citadel.gc"
+   "game/mods/mods_crystalcave.gc"
    "game/mods/mods.gc"
   )
 ;; the debug menu is modified to include PC specific options:
