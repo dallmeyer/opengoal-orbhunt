@@ -14,7 +14,8 @@ Mid-2022 I was watching [headstrong1290](https://www.twitch.tv/headstrong1290) r
 - Clipping through (what appear to be) solid walls/objects should never be necessary (though I can't stop you from doing it when possible)
 - Taking a death should never be necessary (but good luck with that)
 - You may need to work around some invisible collision/walls
-- You will need knowledge of speedrunning tech, such as dealing with slippery surfaces, zoom-walking, extended uppercuts, boosted uppercuts, infinite jump ceilings, etc
+- You will need knowledge of speedrunning tech, such as dealing with slippery surfaces, zoom-walking, extended uppercuts, boosted uppercuts, infinite jump ceilings, rocket uppercuts, Flutflut wall climbing, etc
+  - Some of the harder/inconsistent tricks such as 1-frames, 3-frame jumps, and eco rockets are NOT required, though you might find uses for them.
 - The Zoomer and Flutflut should only be necessary in their intended levels, however you CAN safely take them to any level without crashing (inb4 the optimal route is all Flutflut)
 - When completing tasks, Power Cells may sometimes spawn further away than typical in the vanilla game
 
