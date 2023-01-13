@@ -25,6 +25,7 @@ Mid-2022 I was watching [headstrong1290](https://www.twitch.tv/headstrong1290) r
 Some collectables are annoying to reach - you may want to ease your pain by using **Baby Mode** (Options > Game Options > Baby Mode)
 - Hold L2 and press Dpad Down to store your current position (only works when Jak has a standpoint - you'll hear a ding to confirm)
 - Hold L2 and press Dpad Up to reset back to your previously stored position (this will also reset actors as if you had loaded a save file - green eco crates, enemies, etc)
+- Note: if you reboot in debug mode, Baby Mode will only work if "Game" is highlighted in the menu that comes up when you hold L3 and press R3
 
 ## Bonus
 - A special reward awaits you if you collect all 2000 orbs - go check out a warp gate!
