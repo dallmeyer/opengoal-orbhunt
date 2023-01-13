@@ -13,8 +13,8 @@ Mid-2022 I was watching [headstrong1290](https://www.twitch.tv/headstrong1290) r
 **All collectables needed for 100% should be "in bounds"** meaning they should be plainly visible and accessible:
 - Clipping through (what appear to be) solid walls/objects should never be necessary (though I can't stop you from doing it when possible)
 - Collectables should be within the normal boundaries of their respective levels (e.g. no Citadel orbs in Final Boss area)
-- Taking a death should never be necessary (but good luck with that)
-- You may need to work around some invisible collision/walls
+- Taking a death should never be necessary (good luck with deathless), though a couple collectables might require Save+Load
+- You will need to work around some invisible collision/walls
 - You will need knowledge of speedrunning tech, such as dealing with slippery surfaces, zoom-walking, extended uppercuts, boosted uppercuts, infinite jump ceilings, rocket uppercuts, Flutflut wall climbing, etc
   - Some of the harder/inconsistent tricks such as 1-frames, 3-frame jumps, and eco rockets are NOT required, though you might find uses for them.
 - The Zoomer and Flutflut should only be necessary in their intended levels, however you CAN safely take them to any level without crashing (inb4 the optimal route is all Flutflut)
