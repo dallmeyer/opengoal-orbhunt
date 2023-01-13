@@ -61,8 +61,7 @@
       "bsphere": [-61.41, 121.5, -112.04, 10], // bounding sphere
       "lump": {
         "name":"crystalc-fuel-cell-01",
-        "eco-info": ["int32", 6, 117],
-        "light-index": ["int32", 1]
+        "eco-info": ["int32", 6, 117]
       }
     },
     {
@@ -96,8 +95,7 @@
       "bsphere": [-341.55, 116.60, -85.17, 10], // bounding sphere
       "lump": {
         "name":"crystalc-fuel-cell-04",
-        "eco-info": ["int32", 6, 119],
-        "light-index": ["int32", 2]
+        "eco-info": ["int32", 6, 119]
       }
     },
     // ###########################################################################
@@ -145,8 +143,7 @@
         "name":"crystalc-crate-buzzer-03",
         "crate-type":"'iron",
         "eco-info": ["int32", 8, 131193], // to get SF task = game-task + (2^16 * buzzer-count)
-        "movie-pos": ["meters", -57.17,  56.65, -97.58  ],
-        "light-index": ["int32", 1]
+        "movie-pos": ["meters", -57.17,  56.65, -97.58  ]
       }
     },
     {
@@ -172,8 +169,7 @@
         "name":"crystalc-crate-buzzer-05",
         "crate-type":"'iron",
         "eco-info": ["int32", 8, 262265], // to get SF task = game-task + (2^16 * buzzer-count)
-        "movie-pos": ["meters", -276.72,  60.8, -125.46],
-        "light-index": ["int32", 3]
+        "movie-pos": ["meters", -276.72,  60.8, -125.46]
       }
     },
     {
@@ -186,8 +182,7 @@
         "name":"crystalc-crate-buzzer-06",
         "crate-type":"'iron",
         "eco-info": ["int32", 8, 327801], // to get SF task = game-task + (2^16 * buzzer-count)
-        "movie-pos": ["meters", -312.49,  84.6, -85.21],
-        "light-index": ["int32", 4]
+        "movie-pos": ["meters", -312.49,  84.6, -85.21]
       }
     },
     {
@@ -293,8 +288,7 @@
       "lump": {
         "name":"crystalc-crate-steel-07",
         "crate-type":"'steel",
-        "eco-info": ["int32", 5, 5],
-        "light-index": ["int32", 3]
+        "eco-info": ["int32", 5, 5]
       }
     },
     {
@@ -306,8 +300,7 @@
       "lump": {
         "name":"crystalc-crate-steel-08",
         "crate-type":"'steel",
-        "eco-info": ["int32", 5, 5],
-        "light-index": ["int32", 3]
+        "eco-info": ["int32", 5, 5]
       }
     },
     {
@@ -319,8 +312,7 @@
       "lump": {
         "name":"crystalc-crate-steel-09",
         "crate-type":"'steel",
-        "eco-info": ["int32", 5, 8],
-        "light-index": ["int32", 2]
+        "eco-info": ["int32", 5, 8]
       }
     },
     // ###########################################################################
