@@ -12,6 +12,7 @@ Mid-2022 I was watching [headstrong1290](https://www.twitch.tv/headstrong1290) r
 ## Collectables
 **All collectables needed for 100% should be "in bounds"** meaning they should be plainly visible and accessible:
 - Clipping through (what appear to be) solid walls/objects should never be necessary (though I can't stop you from doing it when possible)
+- You might need to use your goggles in first-person mode to spot some collectables
 - Collectables should be within the normal boundaries of their respective levels (e.g. no Citadel orbs in Final Boss area)
 - Taking a death should never be necessary (good luck with deathless), though a couple collectables might require Save+Load
 - You will need to work around some invisible collision/walls
