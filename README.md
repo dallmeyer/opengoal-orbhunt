@@ -5,7 +5,7 @@
 Play via the [opengoal-mod-launcher](https://opengoal-unofficial-mods.github.io)!
 
 ## Concept
-It's Jak 1 but everything is moved all around! No custom levels and no new actors have been added in this mod - it's more-or-less the vanilla game except that existing actors have been relocated!
+It's Jak 1 but everything is moved all around! All the level models and collision are unchanged, and no new actors have been added in this mod - it's more-or-less the vanilla game except that existing actors have been relocated!
 
 Mid-2022 I was watching [headstrong1290](https://www.twitch.tv/headstrong1290) running Jak II Any% All Orbs, and [Xyphles](https://www.twitch.tv/xyphles) running Jak 3 All Open Orbs, and I thought - "Hey, what if the Orbs in Jak 1 were tucked away like in these games? That could be fun..." Well very quickly that morphed into moving ALL the things around, but I did stick with the name "Orb Hunt" as a shoutout to the original inspiration :)
 
