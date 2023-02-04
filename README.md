@@ -22,11 +22,14 @@ Mid-2022 I was watching [headstrong1290](https://www.twitch.tv/headstrong1290) r
 - The Zoomer and Flutflut should only be necessary in their intended levels, however you CAN safely take them to any level without crashing (inb4 the optimal route is all Flutflut)
 - When completing tasks (e.g. Free 7 Scout Flies), Power Cells will often fly off and spawn further away than typical in the vanilla game
 
-## Baby Mode  
-Some collectables are annoying to reach - you may want to ease your pain by using **Baby Mode** (Options > Game Options > Baby Mode)
-- Hold L2 and press Dpad Down to store your current position (only works when Jak has a standpoint - you'll hear a ding to confirm)
-- Hold L2 and press Dpad Up to reset back to your previously stored position (this will also reset actors as if you had loaded a save file - green eco crates, enemies, etc)
-- Note: if you reboot in debug mode, Baby Mode will only work if "Game" is highlighted in the menu that comes up when you hold L3 and press R3
+## Baby Mode
+Some collectables are well-hidden and/or annoying to reach - you may want to ease your pain by using **Baby Mode** (Options > Game Options > Baby Mode)
+- All warp gates are unlocked
+- Display appears showing the distance from Jak to the closest nearby Precursor Orb
+- Set custom checkpoints that you can quickly reset to!
+  - Hold L2 and press Dpad Down to store your current position (only works when Jak has a standpoint - you'll hear a ding to confirm)
+  - Hold L2 and press Dpad Up to reset back to your previously stored position (this will also reset actors as if you had loaded a save file - green eco crates, enemies, etc)
+  - Note: if you reboot in debug mode, these custom checkpoints only work if "Game" is highlighted in the menu that comes up when you hold L3 and press R3
 
 ## Bonus
 - A special reward awaits you if you collect all 2000 orbs - go check out a warp gate!
