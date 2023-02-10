@@ -25,7 +25,7 @@ Mid-2022 I was watching [headstrong1290](https://www.twitch.tv/headstrong1290) r
 ## Baby Mode
 Some collectables are well-hidden and/or annoying to reach - you may want to ease your pain by using **Baby Mode** (Options > Game Options > Baby Mode)
 - All warp gates are unlocked
-- Display appears showing the distance from Jak to the closest nearby Precursor Orb
+- Display appears showing the distance from Jak to the closest nearby Precursor Orb (does not currently work for Orb crates or vents)
 - Set custom checkpoints that you can quickly reset to!
   - Hold L2 and press Dpad Down to store your current position (only works when Jak has a standpoint - you'll hear a ding to confirm)
   - Hold L2 and press Dpad Up to reset back to your previously stored position (this will also reset actors as if you had loaded a save file - green eco crates, enemies, etc)
