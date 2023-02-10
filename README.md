@@ -19,7 +19,7 @@ Mid-2022 I was watching [headstrong1290](https://www.twitch.tv/headstrong1290) r
 - You will need to work around some invisible collision/walls
 - You will need knowledge of speedrunning tech, such as dealing with slippery surfaces, zoom-walking, extended uppercuts, boosted uppercuts, infinite jump ceilings, rocket uppercuts, Flutflut wall climbing, etc
   - Some of the harder/inconsistent tricks such as 1-frames, 3-frame jumps, and eco rockets are NOT required, though you might find uses for them.
-- The Zoomer and Flutflut should only be necessary in their intended levels, however you CAN safely take them to any level without crashing (inb4 the optimal route is all Flutflut)
+- The Zoomer and Flutflut should only be necessary in their intended levels, however you CAN safely take them to any level without crashing (inb4 the optimal route is all Flutflut). The invisible walls that are associated with the Zoomer and Flutflut are also removed.
 - When completing tasks (e.g. Free 7 Scout Flies), Power Cells will often fly off and spawn further away than typical in the vanilla game
 
 ## Baby Mode
