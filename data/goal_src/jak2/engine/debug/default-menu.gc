@@ -539,7 +539,7 @@
 (defun dm-col-rend-cspec-toggle ((arg0 uint) (arg1 debug-menu-msg))
   (let ((v1-0 *col-rend*))
     (if (= arg1 (debug-menu-msg press))
-        (logxor! (-> v1-0 cspec) arg0)
+        (logxor! (-> v1-0 cspec) (the-as uint arg0))
         )
     (logtest? (-> v1-0 cspec) arg0)
     )
@@ -4280,34 +4280,30 @@
              "Clear map"
              #f
              ,(lambda ()
-                (let ((v1-1
-                        (process-spawn-function
-                          process
-                          (lambda () (with-pp
-                                       (set-master-mode 'game)
-                                       (let ((gp-0 (-> pp clock frame-counter)))
-                                         (until (>= (- (-> pp clock frame-counter) gp-0) (seconds 0.3))
-                                           (suspend)
-                                           )
-                                         )
-                                       (until #f
-                                         (format *stdcon* "press x clear map, press circle cancel~%")
-                                         (cond
-                                           ((cpad-pressed? 0 x)
-                                            (initialize *bigmap*)
-                                            (return #f)
-                                            )
-                                           ((cpad-pressed? 0 circle)
-                                            (return #f)
-                                            )
-                                           )
-                                         (suspend)
-                                         )
-                                       #f
-                                       )
-                                  )
-                          )
-                        )
+                (let ((v1-1 (process-spawn-function process (lambda ()
+                                                              (set-master-mode 'game)
+                                                              (let ((gp-0 (current-time)))
+                                                                (until (>= (- (current-time) gp-0) (seconds 0.3))
+                                                                  (suspend)
+                                                                  )
+                                                                )
+                                                              (until #f
+                                                                (format *stdcon* "press x clear map, press circle cancel~%")
+                                                                (cond
+                                                                  ((cpad-pressed? 0 x)
+                                                                   (initialize *bigmap*)
+                                                                   (return #f)
+                                                                   )
+                                                                  ((cpad-pressed? 0 circle)
+                                                                   (return #f)
+                                                                   )
+                                                                  )
+                                                                (suspend)
+                                                                )
+                                                              #f
+                                                              )
+                                                    )
+                            )
                       )
                   (when v1-1
                     (let ((v0-3 (logclear (-> v1-1 0 mask) (process-mask menu))))
@@ -4325,11 +4321,7 @@
                                  (-> *bigmap* fill-flag)
                                  )
                  )
-           (function
-             "Save"
-             #f
-             ,(lambda ((arg0 object) (arg1 debug-menu-msg)) ((method-of-object *bigmap* bigmap-method-16)) (none))
-             )
+           (function "Save" #f ,(lambda ((arg0 object) (arg1 debug-menu-msg)) (dump-to-file *bigmap*) (none)))
            )
         )
       )

@@ -5924,13 +5924,13 @@
         :name "ctygena-burning-bush-2"
         :level 'ctygena
         :flags (continue-flags cf3)
-        :trans (new 'static 'vector :x -1549425.0 :y 32753.254 :z -805722.1 :w 1.0)
-        :quat (new 'static 'vector :y -0.6395 :w 0.7687)
-        :camera-trans (new 'static 'vector :x -1498315.1 :y 53847.656 :z -808805.2 :w 1.0)
+        :trans (new 'static 'vector :x -1562447.5000 :y 95869.0859 :z -1153554.875 :w 1.0)
+        :quat (new 'static 'vector :y 0.7751 :w 0.6317)
+        :camera-trans (new 'static 'vector :x -1517327.7500 :y 115367.5312 :z -1155636.3750 :w 1.0)
         :camera-rot (new 'static 'inline-array vector3s 3
-          (new 'static 'vector3s :data (new 'static 'array float 3 0.0599 0.0 0.9982))
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.1207 0.9926 0.0072))
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.9908 -0.1209 0.0595))
+          (new 'static 'vector3s :data (new 'static 'array float 3 0.0254 0.0000 0.9996))
+          (new 'static 'vector3s :data (new 'static 'array float 3 -0.1473 0.9890 0.0037))
+          (new 'static 'vector3s :data (new 'static 'array float 3 -0.9887 -0.1473 0.0251))
           )
         :on-goto #f
         :vis-nick 'ctygena
@@ -6502,21 +6502,21 @@
         :name "ctysluma-burning-bush"
         :level 'ctysluma
         :flags (continue-flags cf3)
-        :trans (new 'static 'vector :x 3420067.8 :y 33357.414 :z 984182.4 :w 1.0)
-        :quat (new 'static 'vector :x 0.0002 :y -0.5079 :w 0.8614)
-        :camera-trans (new 'static 'vector :x 3465968.8 :y 53951.69 :z 1002505.0 :w 1.0)
+        :trans (new 'static 'vector :x 4626626.0000 :y 33358.7851 :z 617963.8125 :w 1.0)
+        :quat (new 'static 'vector :x 0.0001 :y 0.6155 :z -0.0015 :w 0.7880)
+        :camera-trans (new 'static 'vector :x 4675683.5000 :y 54097.7304 :z 627260.0625 :w 1.0)
         :camera-rot (new 'static 'inline-array vector3s 3
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.3607 0.0 0.9326))
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.1111 0.9928 -0.0429))
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.9259 -0.1191 -0.3582))
+          (new 'static 'vector3s :data (new 'static 'array float 3  -0.1786  -0.0000  0.9839))
+          (new 'static 'vector3s :data (new 'static 'array float 3  -0.1480   0.9886 -0.0268))
+          (new 'static 'vector3s :data (new 'static 'array float 3  -0.9727  -0.1504 -0.1765))
           )
         :on-goto #f
         :vis-nick 'ctysluma
         :want (new 'static 'inline-array level-buffer-state 6
           (new 'static 'level-buffer-state :name 'ctysluma :display? 'display :force-vis? #f :force-inside? #f)
           (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
+          (new 'static 'level-buffer-state :name 'ctyindb :display? 'display :force-vis? #f :force-inside? #f)
           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
-          (new 'static 'level-buffer-state :name 'fordumpa :display? #f :force-vis? #f :force-inside? #f)
           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
           )
@@ -6653,7 +6653,7 @@
         :name "ctyslumb-burning-bush-2"
         :level 'ctyslumb
         :flags (continue-flags cf3)
-        :trans (new 'static 'vector :x 1747023.5 :y 32766.771 :z -249536.52 :w 1.0)
+        :trans (new 'static 'vector :x 3391714.5000 :y 101622.2343 :z 242877.6093 :w 1.0)
         :quat (new 'static 'vector :y 0.9992 :w -0.0382)
         :camera-trans (new 'static 'vector :x 1763576.2 :y 53857.895 :z -200809.67 :w 1.0)
         :camera-rot (new 'static 'inline-array vector3s 3
@@ -6664,9 +6664,9 @@
         :on-goto #f
         :vis-nick 'ctyslumb
         :want (new 'static 'inline-array level-buffer-state 6
-          (new 'static 'level-buffer-state :name 'ctygenb :display? 'display :force-vis? #f :force-inside? #f)
-          (new 'static 'level-buffer-state :name 'ctyslumb :display? 'display :force-vis? #f :force-inside? #f)
+          (new 'static 'level-buffer-state :name 'ctysluma :display? 'display :force-vis? #f :force-inside? #f)
           (new 'static 'level-buffer-state :name 'ctywide :display? 'display :force-vis? #f :force-inside? #f)
+          (new 'static 'level-buffer-state :name 'ctyslumb :display? 'display :force-vis? #f :force-inside? #f)
           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
           (new 'static 'level-buffer-state :name #f :display? #f :force-vis? #f :force-inside? #f)
@@ -6805,13 +6805,13 @@
         :name "ctyslumc-burning-bush"
         :level 'ctyslumc
         :flags (continue-flags cf3)
-        :trans (new 'static 'vector :x 2201559.0 :y 32754.074 :z -2377998.0 :w 1.0)
-        :quat (new 'static 'vector :y 0.8793 :w -0.4762)
-        :camera-trans (new 'static 'vector :x 2230809.8 :y 53886.156 :z -2335975.5 :w 1.0)
+        :trans (new 'static 'vector :x 1813125.5000 :y 80133.3046 :z -2191100.0000 :w 1.0)
+        :quat (new 'static 'vector :y 0.4747 :w 0.8800)
+        :camera-trans (new 'static 'vector :x 1858839.3750 :y 101149.6484 :z -2168664.5000 :w 1.0)
         :camera-rot (new 'static 'inline-array vector3s 3
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.8202 0.0 0.572))
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.0702 0.9924 -0.1006))
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.5677 -0.1227 -0.814))
+          (new 'static 'vector3s :data (new 'static 'array float 3 -0.4259 -0.0000  0.9047))
+          (new 'static 'vector3s :data (new 'static 'array float 3 -0.1372  0.9884 -0.0646))
+          (new 'static 'vector3s :data (new 'static 'array float 3 -0.8942 -0.1516 -0.4210))
           )
         :on-goto #f
         :vis-nick 'ctyslumc
@@ -8584,13 +8584,13 @@
         :name "stadium-burning-bush"
         :level 'stadium
         :flags (continue-flags cf3)
-        :trans (new 'static 'vector :x 1391598.4 :y 32767.59 :z -3062397.8 :w 1.0)
-        :quat (new 'static 'vector :x -0.0002 :y 0.6685 :z -0.0001 :w -0.7436)
-        :camera-trans (new 'static 'vector :x 1390407.6 :y 52200.242 :z -3017585.5 :w 1.0)
+        :trans (new 'static 'vector :x 178891.7812 :y 49151.9960 :z -1755879.3750 :w 1.0)
+        :quat (new 'static 'vector :x -0.000 :y -0.7861 :z -0.000 :w -0.6179)
+        :camera-trans (new 'static 'vector :x 145883.0000 :y 70246.4453 :z -1716696.1250 :w 1.0)
         :camera-rot (new 'static 'inline-array vector3s 3
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.9956 0.0 0.093))
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.0123 0.9911 -0.1324))
-          (new 'static 'vector3s :data (new 'static 'array float 3 -0.0922 -0.133 -0.9868))
+          (new 'static 'vector3s :data (new 'static 'array float 3 -0.7601  0.0000 -0.6497))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.0778  0.9928 -0.0910))
+          (new 'static 'vector3s :data (new 'static 'array float 3  0.6450 -0.1197 -0.7546))
           )
         :on-goto #f
         :vis-nick 'stadium
