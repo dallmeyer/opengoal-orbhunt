@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/dallmeyer/opengoal-orbhunt/main/ModImage.png" height="400">
 
-Play via the [opengoal-mod-launcher](https://opengoal-unofficial-mods.github.io)!
+Play via the [opengoal-mod-launcher](https://jakmods.dev)!
 
 ## Concept
 It's Jak 1 but everything is moved all around! All the level models and collision are unchanged, and no new actors have been added in this mod - it's more-or-less the vanilla game except that existing actors have been relocated!
