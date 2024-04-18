@@ -312,8 +312,12 @@
 
    (flava-hack int64)
 
-   (baby-mode? symbol)  ;; allows custom checkpoints/respawn like practice mod if enabled
-   (baby-mode-count uint8)  ;; count of baby-mode resets
+   (baby-mode?            symbol)  ;; no longer used, split into the 3 boolean toggles below
+   (baby-mode-count       uint8)  ;; count of baby-mode resets
+   (unlocked-warp-gates?  symbol)
+   (pseudo-savestates?    symbol)
+   (closest-orb?          symbol)
+
    ;; TODO - save/restore original settings (language/sound/etc)
    )
 
@@ -402,6 +406,9 @@
   (set! (-> obj window-lock?) #t)
   (set! (-> obj baby-mode?) #f)
   (set! (-> obj baby-mode-count) 0)
+  (set! (-> obj unlocked-warp-gates?) #f)
+  (set! (-> obj pseudo-savestates?) #f)
+  (set! (-> obj closest-orb?) #f)
 
   (reset-gfx obj)
   (reset-audio obj)
@@ -479,6 +486,10 @@
   (set! (-> obj subtitle-speaker?) 'auto)
   (reset-original-camera obj)
   (set! (-> obj baby-mode?) #f)
+  (set! (-> obj baby-mode-count) 0)
+  (set! (-> obj unlocked-warp-gates?) #f)
+  (set! (-> obj pseudo-savestates?) #f)
+  (set! (-> obj closest-orb?) #f)
   (none))
 
 (defmethod reset-original-camera pc-settings ((obj pc-settings))

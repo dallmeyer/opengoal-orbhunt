@@ -281,9 +281,8 @@
   (when (-> *pc-settings* speedrunner-mode?)
     (update-speedrun obj))
 
-  (when (-> *pc-settings* baby-mode?)
-    (baby-mode-update)
-    )
+  ;; individual bool toggles are checked within
+  (baby-mode-update)
 
   (when (not (-> obj use-vis?))
     (update-video-hacks obj)
@@ -696,6 +695,9 @@
     (("cutscene-skips?") (file-stream-read-symbol file)) ;; TODO remove
     (("baby-mode?") (set! (-> obj baby-mode?) (file-stream-read-symbol file)))
     (("baby-mode-count") (set! (-> obj baby-mode-count) (file-stream-read-int file)))
+    (("unlocked-warp-gates?") (set! (-> obj unlocked-warp-gates?) (file-stream-read-symbol file)))
+    (("pseudo-savestates?") (set! (-> obj pseudo-savestates?) (file-stream-read-symbol file)))
+    (("closest-orb?") (set! (-> obj closest-orb?) (file-stream-read-symbol file)))
     (("first-camera-h-inverted?") (set! (-> obj first-camera-h-inverted?) (file-stream-read-symbol file)))
     (("first-camera-v-inverted?") (set! (-> obj first-camera-v-inverted?) (file-stream-read-symbol file)))
     (("third-camera-h-inverted?") (set! (-> obj third-camera-h-inverted?) (file-stream-read-symbol file)))
@@ -803,6 +805,9 @@
   (format file "  (subtitle-speaker ~A)~%" (-> obj subtitle-speaker?))
   (format file "  (baby-mode? ~A)~%" (-> obj baby-mode?))
   (format file "  (baby-mode-count ~D)~%" (-> obj baby-mode-count))
+  (format file "  (unlocked-warp-gates? ~A)~%" (-> obj unlocked-warp-gates?))
+  (format file "  (pseudo-savestates? ~A)~%" (-> obj pseudo-savestates?))
+  (format file "  (closest-orb? ~A)~%" (-> obj closest-orb?))
 
   #|
   (format file "  (scenes-seen")

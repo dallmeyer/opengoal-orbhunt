@@ -454,6 +454,12 @@
 
 (#x1601 "BABY MODE"
         "BABY MODE")
+(#x1603 "UNLOCKED WARP GATES"
+        "UNLOCKED WARP GATES")
+(#x1604 "PSEUDO SAVESTATES"
+        "PSEUDO SAVESTATES")
+(#x1605 "CLOSEST ORB"
+        "CLOSEST ORB")
 
 ;; custom task names
 ;; Geyser

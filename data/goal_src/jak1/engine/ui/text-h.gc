@@ -809,8 +809,12 @@
   (speedrun-all-cutscenes        #x1524)
   
   (rolling-buzzer               #x1600)
-  (baby-mode                    #x1601)  
+  (baby-mode                    #x1601)
   (tnt-dodged                   #x1602)
+
+  (unlocked-warp-gates          #x1603)
+  (pseudo-savestates            #x1604)
+  (closest-orb                  #x1605)
 ;; GAME-TEXT-ID ENUM ENDS
   )
 

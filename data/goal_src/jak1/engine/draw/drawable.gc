@@ -1164,9 +1164,7 @@
     )
 
   ;; find closest orb for baby-mode
-  (if (-> *pc-settings* baby-mode?)
-    (baby-mode-find-closest-orb)
-    )
+  (baby-mode-find-closest-orb)
 
   ;; debug drawing
   (with-profiler "debug-draw"

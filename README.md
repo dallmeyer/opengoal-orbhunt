@@ -22,15 +22,18 @@ Mid-2022 I was watching [headstrong1290](https://www.twitch.tv/headstrong1290) r
 - The Zoomer and Flutflut should only be necessary in their intended levels, however you CAN safely take them to any level without crashing (inb4 the optimal route is all Flutflut). The invisible walls that are associated with the Zoomer and Flutflut are also removed.
 - When completing tasks (e.g. Free 7 Scout Flies), Power Cells will often fly off and spawn further away than typical in the vanilla game
 
-## Baby Mode
-Some collectables are well-hidden and/or annoying to reach - you may want to ease your pain by using **Baby Mode** (Options > Game Options > Baby Mode)
-- All warp gates are unlocked
-- Display appears showing the distance from Jak to the closest nearby Precursor Orb (now fixed for Orb crates and vents!)
-- Set custom checkpoints that you can quickly reset to!
-  - Hold L2 and press Dpad Down to store your current position (only works when Jak has a standpoint - you'll hear a ding to confirm)
-  - Hold L2 and press Dpad Up to reset back to your previously stored position (this will also reset actors as if you had loaded a save file - green eco crates, enemies, etc)
+## Difficulty Toggles (previously known as Baby Mode)
+Some collectables are well-hidden and/or annoying to reach - you may want to ease your pain by using some of the below options to change the difficulty (you can find them under Options > Game Options)
+- UNLOCKED WARP GATES - all warp gates are unlocked from the very beginning, so you're not trapped in Geyser Rock
+- PSEUDO SAVESTATES - set custom checkpoints that you can quickly reset to! These only work when Jak has a standpoint - you'll hear a ding to confirm/buzz if rejected
+  - Hold R3 and press Dpad Down to store your current position
+  - Hold R3 and press Dpad Up to reset back to your previously stored position
+    - Note: this will also reset actors (green eco crates, enemies, etc), similar to dying or loading a save file
   - Note: if you reboot in debug mode, these custom checkpoints only work if "Game" is highlighted in the menu that comes up when you hold L3 and press R3
+- CLOSEST ORB - color-coded text displays the distance from Jak to the closest nearby Precursor Orb (including orbs within crates/vents/Plant Boss)
 
 ## Bonus
 - A special reward awaits you if you collect all 2000 orbs - go check out a warp gate!
 - There are a few stupid easter eggs as well, see if you can spot them! (hint: nice)
+
+Orb Hunt II soon™️

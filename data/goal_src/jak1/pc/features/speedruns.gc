@@ -457,8 +457,8 @@
   )
 
 (define *baby-mode-orb-dist* (the-as float #f))
-(defun draw-baby-mode ()
-  (when (and (-> *setting-control* current allow-pause) (-> *pc-settings* baby-mode?))
+(defun draw-closest-orb ()
+  (when (and (-> *setting-control* current allow-pause) (-> *pc-settings* closest-orb?))
     (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
                                       (bucket-id debug-no-zbuf))
       (if (= *baby-mode-orb-dist* #f)
@@ -497,7 +497,7 @@
 (defun speedrun-draw-settings ()
   "Draw speedrun related settings in the bottom left corner"
   (when (and (-> *pc-settings* speedrunner-mode?)
-             (not (-> *pc-settings* baby-mode?))
+             (not (-> *pc-settings* closest-orb?))
              (not (paused?))
              (-> *speedrun-info* should-display?))
     (with-dma-buffer-add-bucket ((buf (-> (current-frame) global-buf))
@@ -510,10 +510,10 @@
   (none))
 
 (defun baby-mode-update ()
-  (when (-> *pc-settings* baby-mode?)
-    ;; Draw info to the screen
-    (draw-baby-mode)
+  ;; Draw info to the screen
+  (draw-closest-orb)
 
+  (when (-> *pc-settings* pseudo-savestates?)
     ;; call post-init function
     (when (and *practice-spawn-post-init*
                 *target*
@@ -524,7 +524,7 @@
       (set! *practice-spawn-post-init* #f)
       )
 
-    (when (cpad-hold? 0 l2)
+    (when (cpad-hold? 0 r3)
       ;; Check for fast reset combo
       (when (cpad-pressed? 0 up)
         (format #t "player triggered reset combo~%")
@@ -612,6 +612,8 @@
       (set! *last-real-continue-point* (-> *game-info* current-continue))
       )
     (set! (-> *game-info* current-continue) *tmp-continue-point*)
+    (sound-play "select-menu")
+    
     (initialize! *game-info* 'dead (the-as game-save #f) (the-as string #f))
     (speedrun-reset-common-settings)
     )
@@ -651,7 +653,7 @@
 (defun speedrun-practice-store-temp-checkpoint ()
   (case (-> *target* state)
     ;; only store temp checkpoint if in one of these states
-    ((target-stance target-wade-stance target-swim-stance target-flut-stance target-racing)
+    ((target-stance target-look-around target-wade-stance target-flut-stance target-racing)
       ;; assume current continue is good enough for the current location
       (continue-point-copy! *tmp-continue-point* (-> *game-info* current-continue))
       (vector-copy! (-> *tmp-continue-point* trans) (-> *target* root trans))
@@ -671,19 +673,27 @@
         )
       (sound-play "select-menu")
       )
+    (else
+      (sound-play "caught-eel")
+      )
     )
   (none)
   )
 
 
 (defun speedrun-practice-spawn ()
-  ;; randomize game id so the autosplitter knows to restart
-  (update-autosplit-jak1-new-game)
+  (case (-> *target* state)
+    ;; only store temp checkpoint if in one of these states
+    ((target-stance target-look-around target-wade-stance target-flut-stance target-racing)
+      ;; reset any previous post-target-init callback
+      (set! *practice-spawn-post-init* #f)
 
-  ;; reset any previous post-target-init callback
-  (set! *practice-spawn-post-init* #f)
-
-  (speedrun-practice-temp-checkpoint)
-      
+      (speedrun-practice-temp-checkpoint)
+      )
+    (else
+      (sound-play "caught-eel")
+      )
+    )
+    
   (none)
   )
