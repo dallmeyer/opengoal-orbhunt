@@ -813,7 +813,7 @@
                   (let ((a0-56 (clear *temp-string*))
                         (a1-21 "/~D")
                         (a2-17 (if (< 100 (the int (-> s3-3 file s1-0 fuel-cell-count)))
-                                   (-> obj total-nb-of-power-cells)
+                                   101 ;; (-> obj total-nb-of-power-cells) ;; hide TFL
                                    100
                                    )
                                )
@@ -827,7 +827,7 @@
                   (set! sv-96 format)
                   (let ((a0-60 (clear *temp-string*))
                         (a1-23 "/~D")
-                        (a2-19 (-> obj total-nb-of-orbs))
+                        (a2-19 2000) ;; (-> obj total-nb-of-orbs)) ;; hide TFL
                         )
                     (sv-96 a0-60 a1-23 a2-19)
                     )
@@ -838,7 +838,7 @@
                   (set! sv-112 format)
                   (let ((a0-64 (clear *temp-string*))
                         (a1-25 "/~D")
-                        (a2-21 (-> obj total-nb-of-buzzers))
+                        (a2-21 112) ;; (-> obj total-nb-of-buzzers)) ;; hide TFL
                         )
                     (sv-112 a0-64 a1-25 a2-21)
                     )

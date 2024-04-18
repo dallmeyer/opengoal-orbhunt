@@ -29,7 +29,7 @@ Some collectables are well-hidden and/or annoying to reach - you may want to eas
   - Hold R3 and press Dpad Down to store your current position
   - Hold R3 and press Dpad Up to reset back to your previously stored position
     - Note: this will also reset actors (green eco crates, enemies, etc), similar to dying or loading a save file
-  - Note: if you reboot in debug mode, these custom checkpoints only work if "Game" is highlighted in the menu that comes up when you hold L3 and press R3
+  - Note: if you reboot into _debug mode_, use L2 instead of R3. Also be sure "Game" is highlighted in the menu that comes up when you hold L3 and press R3
 - CLOSEST ORB - color-coded text displays the distance from Jak to the closest nearby Precursor Orb (including orbs within crates/vents/Plant Boss)
 
 ## Bonus
