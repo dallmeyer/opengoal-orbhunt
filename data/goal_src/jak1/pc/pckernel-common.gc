@@ -809,7 +809,7 @@
   (format file "  (unlocked-warp-gates? ~A)~%" (-> obj unlocked-warp-gates?))
   (format file "  (pseudo-savestates? ~A)~%" (-> obj pseudo-savestates?))
   (format file "  (closest-orb? ~A)~%" (-> obj closest-orb?))
-  (format file "  (text-language ~D)~%" (-> obj slip-assist))
+  (format file "  (slip-assist ~D)~%" (-> obj slip-assist))
 
   #|
   (format file "  (scenes-seen")
