@@ -815,6 +815,10 @@
   (unlocked-warp-gates          #x1603)
   (pseudo-savestates            #x1604)
   (closest-orb                  #x1605)
+  (slip-assist                  #x1606)
+  (slip-normal                  #x1607)
+  (slip-no-slip                 #x1608)
+  (slip-spiderman               #x1609)
 ;; GAME-TEXT-ID ENUM ENDS
   )
 

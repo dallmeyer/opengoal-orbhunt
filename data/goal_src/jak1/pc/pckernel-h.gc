@@ -207,6 +207,12 @@
    )
   )
 
+(defenum slip-assist-mode
+  :type uint8
+  (normal)
+  (no-slip)
+  (spiderman)
+  )
 
 ;; All of the configuration for the PC port in GOAL. Access things from here!
 ;; Includes some methods to change parameters.
@@ -317,6 +323,7 @@
    (unlocked-warp-gates?  symbol)
    (pseudo-savestates?    symbol)
    (closest-orb?          symbol)
+   (slip-assist           slip-assist-mode)
 
    ;; TODO - save/restore original settings (language/sound/etc)
    )
@@ -409,6 +416,7 @@
   (set! (-> obj unlocked-warp-gates?) #f)
   (set! (-> obj pseudo-savestates?) #f)
   (set! (-> obj closest-orb?) #f)
+  (set! (-> obj slip-assist) (slip-assist-mode normal))
 
   (reset-gfx obj)
   (reset-audio obj)
@@ -490,6 +498,7 @@
   (set! (-> obj unlocked-warp-gates?) #f)
   (set! (-> obj pseudo-savestates?) #f)
   (set! (-> obj closest-orb?) #f)
+  (set! (-> obj slip-assist) (slip-assist-mode normal))
   (none))
 
 (defmethod reset-original-camera pc-settings ((obj pc-settings))

@@ -483,6 +483,13 @@
   (none)
   )
 
+(defun get-active-pat-mode-info ()
+  (case (-> *pc-settings* slip-assist)
+    (((slip-assist-mode normal)) *pat-mode-info*)
+    (((slip-assist-mode no-slip)) *no-slip-pat-mode-info*)
+    (((slip-assist-mode spiderman)) *spiderman-pat-mode-info*)
+    )
+  )
 
 (defun hide-speedrun-display ()
   (set! (-> *speedrun-info* should-display?) #f)

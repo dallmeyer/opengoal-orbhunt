@@ -234,7 +234,7 @@
   (if (< (-> arg0 poly-angle) 0.0)
       (set! sv-96 (logior sv-96 #x4000))
       )
-  (set! sv-160 (< (fabs (-> arg0 surface-angle)) (-> *pat-mode-info* (-> arg0 cur-pat mode) wall-angle)))
+  (set! sv-160 (< (fabs (-> arg0 surface-angle)) (-> (get-active-pat-mode-info) (-> arg0 cur-pat mode) wall-angle)))
   (if (and sv-160 (and (= (-> arg0 unknown-surface00 mode) 'dive) (< 0.2 (fabs (-> arg0 surface-angle)))))
       (set! sv-160 (the-as symbol #f))
       )

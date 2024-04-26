@@ -994,7 +994,7 @@
   (if (< (-> arg0 poly-angle) -0.2)
       (set! sv-80 (logior sv-80 16))
       )
-  (set! sv-128 (< (fabs (-> arg0 surface-angle)) (-> *pat-mode-info* (-> arg0 cur-pat mode) wall-angle)))
+  (set! sv-128 (< (fabs (-> arg0 surface-angle)) (-> (get-active-pat-mode-info) (-> arg0 cur-pat mode) wall-angle)))
   (when (zero? (logand (-> arg0 prev-status) 1))
     ;; hit the ground!
     (set! (-> arg0 ground-impact-vel) (- (vector-dot (-> arg0 transv) (-> arg0 dynam gravity-normal))))
