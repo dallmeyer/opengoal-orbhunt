@@ -161,13 +161,13 @@
         )
     (new 'static 'pat-mode-info
         :name "wall"
-        :wall-angle 0.2
+        :wall-angle 0.0
         :color (new 'static 'rgba :b #x7f :a #x40)
         :hilite-color (new 'static 'rgba :b #xff :a #x80)
         )
     (new 'static 'pat-mode-info
         :name "obstacle"
-        :wall-angle 0.2
+        :wall-angle 0.0
         :color (new 'static 'rgba :r #x7f :b #x7f :a #x40)
         :hilite-color (new 'static 'rgba :r #xff :b #xff :a #x80)
         )
