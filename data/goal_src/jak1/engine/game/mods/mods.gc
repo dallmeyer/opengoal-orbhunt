@@ -404,7 +404,7 @@
       )
     (('racer-15)
       ;; up ledge from where normally is at end of MP
-      (set-vector-meters! dst 985.71  40.47 -3403.63)
+      (set-vector-meters! dst 985.71  40.7 -3403.63)
       )
     (('ogreboss-1)
       ;; hot rock near normal spawn

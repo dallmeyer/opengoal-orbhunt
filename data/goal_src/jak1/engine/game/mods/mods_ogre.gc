@@ -81,7 +81,7 @@
     (('crate-2994) (set-vector-meters! (-> arg0 extra trans) 479.9  38.0 -3280.7)) ;; between stalagmites/crystals mid cave    
     
     ;; CELLS
-    (('racer-15) (set-vector-meters! (-> arg0 extra trans) 985.71  40.47 -3403.63)) ;; up ledge from end of MP  
+    (('racer-15) (set-vector-meters! (-> arg0 extra trans) 985.71  40.7 -3403.63)) ;; up ledge from end of MP  
     (('fuel-cell-62) (override-fuel-cell-position arg0  89.21  34.8 -2414.80))  ;; on road less traveled (on foot, dont take first shortcut)
       (('tntbarrel-218) (set-vector-meters! (-> arg0 extra trans) 93.21  31.7 -2414.80))  ;; surrounding fuel-cell-62
       (('tntbarrel-223) (set-vector-meters! (-> arg0 extra trans) 89.21  33.0 -2418.80))  ;; surrounding fuel-cell-62

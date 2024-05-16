@@ -442,7 +442,15 @@
   (set! (-> obj path) (-> obj path-target))
   (set-vector! (-> obj extra-trans) 0.0 6144.0 0.0 1.0)
   (set! (-> obj auto-get-off) #f)
-  (move-to-ground (-> obj root-override) 40960.0 40960.0 #t (collide-kind background))
+  (case (-> obj name) :comp name=
+    (('racer-15)
+      ;; skip this so cell doesnt end up underground
+      ;; the ground collision where this sits is technically village3 so it doesnt exist when ogre loads
+      )
+    (else
+      (move-to-ground (-> obj root-override) 40960.0 40960.0 #t (collide-kind background))
+      )
+    )
   (set! (-> obj cell) (the-as handle #f))
   (if (not *allow-zoomer-anywhere*)
     (blocking-plane-spawn
